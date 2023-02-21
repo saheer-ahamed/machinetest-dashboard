@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logoDiv">
+                MA
+            </div>
+            <ul>
+                <li>
+                    <i class="uil uil-create-dashboard icon"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li class="active">
+                    <i class="uil uil-file-graph icon"></i>
+                    <span>Auditing</span>
+                </li>
+                <li>
+                    <i class="uil uil-comment-alt-dots icon"></i>
+                    <span>Messages</span>
+                </li>
+                <li>
+                    <i class="uil uil-building icon"></i>
+                    <span>Your&nbsp;Clients</span>
+                </li>
+                <li>
+                    <i class="uil uil-setting icon"></i>
+                    <span>Settings</span>
+                </li>
+                <li>
+                    <i class="uil uil-users-alt icon"></i>
+                    <span>Users</span>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <h3>Auditing</h3>
+                <div class="account-menu">
+                    <i class="uil uil-bell notification-icon" data-count="10"></i>
+                    <h3>VC</h3>
+                </div>
+            </div>
+            <div class="searchMenu">
+                <div class="inputHolder">
+                    <i class="uil uil-search search-icon"></i>
+                    <input type="text" class="searchInput" placeholder="Search for your client/company" />
+                </div>
+                <button type="button" class="invite-btn">Invite your clients</button>
+            </div>
+            <div class="section">
+                <div class="table-section">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name of your Client/Company</th>
+                                <th>Period of Audit</th>
+                                <th>Type of Audit</th>
+                                <th>Auditing Assigned to</th>
+                                <th>Audit Completion Process</th>
+                            </tr>
+                        </thead>
+                        <div></div>
+                        <tbody>
+                            <tr>
+                                <td>Star Technologies</td>
+                                <td>01-Apr-2022 To 31-Mar-2023</td>
+                                <td>Tax Audit</td>
+                                <td class="red-underline">Assign to</td>
+                                <td class="progress-bar">
+                                    <progress id="process" value="10" max="100"></progress>
+                                    <label for="process">0%</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Orion Hospital</td>
+                                <td>01-Apr-2021 To 31-Mar-2022</td>
+                                <td>Internal Audit</td>
+                                <td class="with-plus">
+                                    Akash
+                                    <i class="uil uil-plus plus-icon"></i>
+                                </td>
+                                <td class="progress-bar">
+                                    <progress id="process" value="40" max="100"></progress>
+                                    <label for="process">40%</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Season travels</td>
+                                <td>01-June-2022 To 31-Jan-2023</td>
+                                <td>Interim Audit</td>
+                                <td class="with-plus">
+                                    Harish
+                                    <i class="uil uil-plus plus-icon"></i>
+                                </td>
+                                <td class="progress-bar">
+                                    <progress id="process" value="70" max="100"></progress>
+                                    <label for="process">70%</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>KP Retail</td>
+                                <td>01-Apr-2022 To 31-Mar-2023</td>
+                                <td>Statutory Audit</td>
+                                <td class="with-plus">
+                                    Rahul
+                                    <i class="uil uil-plus plus-icon"></i>
+                                </td>
+                                <td class="progress-completed">
+                                    <button class="btn-completed">Completed</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ODPC Power Limited</td>
+                                <td>01-Apr-2021 To 31-Mar-2022</td>
+                                <td>Internal Audit</td>
+                                <td class="with-plus">
+                                    Karthick
+                                    <i class="uil uil-plus plus-icon"></i>
+                                </td>
+                                <td class="progress-bar">
+                                    <progress id="process" value="78" max="100"></progress>
+                                    <label for="process">78%</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

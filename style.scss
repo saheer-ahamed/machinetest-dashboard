@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lexend, sans-serif;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 160vh;
+
+    .sidebar {
+        width: 6.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: hsl(232, 55%, 36%);
+        padding: 1rem 2rem;
+
+        .logoDiv {
+            background-color: hsl(231, 54%, 95%);
+            padding: .7rem .6rem;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            position: relative;
+
+            li {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .4rem;
+                width: 100%;
+                color: hsl(232, 31%, 81%);
+
+                .icon {
+                    font-size: 1.8rem;
+                }
+
+                span {
+                    font-size: .85rem;
+                }
+
+                &.active {
+                    color: hsl(0, 0%, 100%);
+
+                    .icon {
+                        background-color: hsl(232, 55%, 65%);
+                        padding: .4rem;
+                        border-radius: 10px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    margin-bottom: 21rem;
+                }
+            }
+        }
+    }
+
+    .main {
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem 1rem 2.8rem;
+            border-bottom: 3px solid hsl(0, 0%, 87%);
+
+            >h3 {
+                font-size: 1.2rem;
+            }
+
+            .account-menu {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
+                .notification-icon {
+                    font-size: 2.5rem;
+                    position: relative;
+                    transform: rotate(10deg);
+                    cursor: pointer;
+
+                    &::after {
+                        content: attr(data-count);
+                        top: 0;
+                        right: -5px;
+                        width: 25px;
+                        height: 25px;
+                        background-color: red;
+                        position: absolute;
+                        border-radius: 50%;
+                        color: white;
+                        font-size: .9rem;
+                        text-align: center;
+                        line-height: 25px;
+                        transform: rotate(-10deg);
+                    }
+                }
+
+                >h3 {
+                    background: hsl(231, 54%, 95%);
+                    border-radius: 50%;
+                    padding: .7rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .searchMenu {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 1.5rem 2rem 2.8rem;
+
+            .inputHolder {
+                background: #fff;
+                border: none;
+                outline: none;
+                box-shadow: 0 0 5px 0px #969696;
+                border-radius: 10px;
+                padding: .7rem 1rem;
+                display: flex;
+                gap: 1rem;
+                width: 23.5rem;
+                position: relative;
+
+                .searchInput {
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 1rem;
+                }
+
+                .search-icon {
+                    font-size: 1.5rem;
+                    color: hsl(0, 0%, 58%);
+                }
+
+            }
+
+            .invite-btn {
+                display: flex;
+                align-items: center;
+                padding: 0 1rem;
+                outline: none;
+                border-radius: 10px;
+                border: 1px solid hsl(233, 55%, 85%);
+                color: hsl(232, 55%, 36%);
+                font-size: 1.1rem;
+                font-weight: bolder;
+                background-color: #fff;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+
+        }
+
+        .section {
+            display: flex;
+            padding: 2rem 1.5rem 2rem 2.8rem;
+
+            .table-section {
+                background-color: #fff;
+                box-shadow: 0 0 5px 0px #969696;
+                border-radius: 10px;
+                width: 100%;
+
+                table {
+                    width: 100%;
+                    padding: 2.5rem 0 2.5rem 3rem;
+                    position: relative;
+
+                    thead {
+                        width: 100%;
+                        margin-bottom: 2rem;
+
+                        tr:last-child {
+                            border-bottom: 2px solid black;
+                        }
+
+                        th {
+                            padding: 0 0 3rem;
+                            text-align: left;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            text-align: left;
+
+                            td {
+                                padding: 1.2rem 0;
+
+                                &.with-plus {
+                                    display: flex;
+                                    align-items: center;
+                                }
+
+                                .btn-completed {
+                                    border: none;
+                                    padding: .3rem 2rem;
+                                    border-radius: 20q;
+                                    font-size: 1rem;
+                                    background: hsl(155, 100%, 35%);
+                                    color: #fff;
+                                    font-weight: bold;
+                                }
+
+                                .plus-icon {
+                                    background-color: #f2f2f2;
+                                    border-radius: 50%;
+                                    font-size: 1.3rem;
+                                    font-weight: bold;
+                                }
+
+                                label,
+                                progress {
+                                    display: block;
+                                }
+
+                                progress {
+                                    height: 1.6rem;
+                                }
+
+                                label{
+                                    font-weight: bold;
+                                }
+                            }
+
+                            &:first-child {
+                                margin-top: 2rem;
+                            }
+
+                            .red-underline {
+                                color: red;
+                                text-decoration: underline;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &::before {
+                            content: "";
+                            display: table-row;
+                            width: 98%;
+                            text-align: center;
+                            left: 0;
+                            margin: 0 1rem 5rem;
+                            height: 1px;
+                            background-color: hsl(0, 0%, 78%);
+                            position: absolute;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
